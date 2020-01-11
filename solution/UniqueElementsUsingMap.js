@@ -24,11 +24,7 @@ var arr = [
     3
 ];
 function getUnique(arr) {
-    let map = new Map(arr);
-
-    for (let i = 0; i < arr.length; i++) {
-        map.set(arr[i], 1);
-    }
+    let map = new Map(arr.map((val) => [val, 1]));
 
     let result = [];
     for (let key of map.keys()) {
