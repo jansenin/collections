@@ -103,3 +103,46 @@ let b: any = {
 };
 
 for (let key in b) console.log(key);
+
+console.log();
+console.log();
+
+let obj1: any = {
+    first_name: "Bob",
+    last_name: "Jones",
+
+    email: "bob@gmail.com",
+
+    address: {
+        line_1: "1234 Main St",
+        line_2: "Apt 413",
+        city: "Los Angeles",
+        state: "CA",
+        zip: "90048"
+    },
+
+    logins: [
+        { date: "10/22/2012", ip: "192.168.0.1" },
+        { date: "10/21/2012", ip: "192.168.0.1" }
+    ],
+
+    photos: ["IMG-1985.jpg", "IMG-1987.jpg"]
+};
+
+let obj2: any = {
+    last_name: "Jones",
+    active: true,
+
+    address: {
+        line_1: "2143 South Main St",
+        line_2: undefined
+    },
+
+    logins: { date: "10/23/2012", ip: "192.168.0.1" },
+
+    photos: undefined
+};
+
+ObjectMergeProblem.merge(obj1, obj2);
+
+console.log(obj1);
